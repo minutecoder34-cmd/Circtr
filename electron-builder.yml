@@ -1,0 +1,21 @@
+appId: com.circtr.desktop
+productName: CIRCTR
+directories:
+  app: .desktop-app
+  output: release
+files:
+  - "**/*"
+asar: true
+win:
+  icon: build/icon.ico
+  target:
+    - nsis
+artifactName: ${productName}-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  installerHeaderIcon: build/icon.ico
